@@ -204,7 +204,7 @@ set_timezone_utc() {
 create_docker_network() {
     if ! docker network inspect $DOCKER_NETWORK_NAME &>/dev/null; then
         echo "Creating Docker network: $DOCKER_NETWORK_NAME"
-        sudo docker network create --internal --subnet=$DOCKER_NETWORK_SUBNET $DOCKER_NETWORK_NAME
+        sudo docker network create --subnet=$DOCKER_NETWORK_SUBNET $DOCKER_NETWORK_NAME
     else
         echo "Docker network $DOCKER_NETWORK_NAME already exists. Skipping creation."
     fi
