@@ -126,7 +126,7 @@ install_essentials() {
 configure_ssmtp() {
     echo "Configuring ssmtp for SMTP..."
     # Check if ssmtp.conf exists and has values for FromLineOverride, root, and mailhub
-    if [ ! -f /etc/ssmtp/ssmtp.conf ] || ! grep -qE "^FromLineOverride=|^root=|^mailhub=" /etc/ssmtp/ssmtp.conf; then
+    if [ ! -f /etc/ssmtp/ssmtp.conf ] || ! grep -qE "^AuthUser=" /etc/ssmtp/ssmtp.conf; then
         # Replace placeholders with configurable values
         sudo tee /etc/ssmtp/ssmtp.conf > /dev/null <<EOF
 UseTLS=YES
