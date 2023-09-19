@@ -109,17 +109,18 @@ install_essentials() {
     echo "Installing essential packages..."
     sudo apt-get install -y -qq zip
     sudo apt-get install -y -qq unzip
-    sudo apt install -y -qq lm-sensors
+    sudo apt-get install -y -qq lm-sensors
     sudo apt-get install -y -qq iptables
     sudo apt-get install -y -qq jq
     sudo apt-get install -y -qq nmap
     sudo apt-get install -y -qq build-essential libssl-dev libffi-dev python-dev python-pip
-    sudo apt install -y -qq nano
-    sudo apt install -y -qq curl
-    sudo apt install -y -qq wget
-    sudo apt install -y -qq ssmtp
-    sudo apt install -y -qq mailutils
+    sudo apt-get install -y -qq nano
+    sudo apt-get install -y -qq curl
+    sudo apt-get install -y -qq wget
+    sudo apt-get install -y -qq ssmtp
+    sudo apt-get install -y -qq mailutils
     sudo apt-get install -y -qq python3-venv
+    sudo apt-get install -y -qq python3-pip
 }
 
 # Function to configure ssmtp for sending emails via SMTP
